@@ -477,7 +477,7 @@
 						<!-- need to be set up in the metadata, each with its own format section, and online resource(s) -->
 						<!-- for now this script assumes that all online resources have the same file format/compression -->
 						<!-- modified JFK Nov. 9, 2023 --> 
-						<!-- Deprecated Sept. 2023 <file-type><xsl:value-of select="/metadata/distInfo/distFormat/formatName"/></file-type> -->
+						<!-- <file-type><xsl:value-of select="/metadata/distInfo/distFormat/formatName"/></file-type> -->
 						<distribution-format><xsl:value-of select="/metadata/distInfo/distFormat/formatName"/></distribution-format>
 						<compression><xsl:value-of select="/metadata/distInfo/distFormat/fileDecmTech"/></compression>
 						<!-- added distributor ... InPort wants this -->
