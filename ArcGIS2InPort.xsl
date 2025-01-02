@@ -16,6 +16,9 @@
 		<xsl:variable name="defaultPointOfContactEmail" select="'somepointofcontact@noaa.gov'" />
 		<xsl:variable name="defaultDataStewardEmail" select="'somedatasteward@noaa.gov'" />
 		<xsl:variable name="defaultMetadataContactEmail" select="'somemetadatacontact@noaa.gov'" />
+		<xsl:variable name="defaultPointOfContactName" select="'First Last'" />
+		<xsl:variable name="defaultDataStewardName" select="'First Last'" />
+		<xsl:variable name="defaultMetadataContactName" select="'First Last'" />		
 		<xsl:variable name="defaultOrganizationName" select="'Some Organization'" />
 		<xsl:variable name="esriCreaDate" select="metadata/Esri/CreaDate" />
 		<xsl:variable name="defaultEffectiveDate" select="concat(concat(concat(concat(concat(substring($esriCreaDate,1,4),'-'),substring($esriCreaDate,5,2)),'-'),substring($esriCreaDate,7,2)),'T')" />		
@@ -264,6 +267,15 @@
 							<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>
 							<contact-email><xsl:value-of select="/metadata/dataIdInfo/idCitation/citRespParty/rpCntInfo/cntAddress/eMailAdd"/></contact-email>
 							<contact-type>Person</contact-type>
+							<xsl:choose>
+								<xsl:when test="/metadata/dataIdInfo/idCitation/citRespParty/rpIndName">
+									<contact-name><xsl:value-of select="/metadata/dataIdInfo/idCitation/citRespParty/rpIndName"/></contact-name>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:variable name="tmpEmail" select="/metadata/dataIdInfo/idCitation/citRespParty/rpCntInfo/cntAddress/eMailAdd"/>
+									<contact-name><xsl:value-of select="replace(substring-before($tmpEmail,'@noaa.gov'),'\.',' ')"/></contact-name>
+								</xsl:otherwise>
+							</xsl:choose>
 						</support-role>
 					</xsl:when>
 					<xsl:otherwise>
@@ -272,6 +284,7 @@
 							<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>
 							<contact-email><xsl:value-of select="$defaultDataStewardEmail"/></contact-email>
 							<contact-type>Person</contact-type>
+							<contact-name><xsl:value-of select="$defaultDataStewardName"/></contact-name>
 						</support-role>
 					</xsl:otherwise>
 				</xsl:choose>
@@ -302,6 +315,15 @@
 							<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>
 							<contact-email><xsl:value-of select="/metadata/dataIdInfo/idPoC/rpCntInfo/cntAddress/eMailAdd"/></contact-email>
 							<contact-type>Person</contact-type>
+							<xsl:choose>
+								<xsl:when test="/metadata/dataIdInfo/idPoC/rpIndName">
+									<contact-name><xsl:value-of select="/metadata/dataIdInfo/idPoC/rpIndName"/></contact-name>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:variable name="tmpEmail" select="/metadata/dataIdInfo/idPoC/rpCntInfo/cntAddress/eMailAdd"/>
+									<contact-name><xsl:value-of select="replace(substring-before($tmpEmail,'@noaa.gov'),'\.',' ')"/></contact-name>
+								</xsl:otherwise>
+							</xsl:choose>							
 						</support-role>
 					</xsl:when>
 					<xsl:otherwise>
@@ -310,6 +332,7 @@
 							<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>
 							<contact-email><xsl:value-of select="$defaultPointOfContactEmail"/></contact-email>
 							<contact-type>Person</contact-type>
+							<contact-name><xsl:value-of select="$defaultPointOfContactName"/></contact-name>
 						</support-role>
 					</xsl:otherwise>
 				</xsl:choose>
@@ -321,6 +344,15 @@
 							<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>
 							<contact-email><xsl:value-of select="/metadata/mdContact/rpCntInfo/cntAddress/eMailAdd"/></contact-email>
 							<contact-type>Person</contact-type>
+							<xsl:choose>
+								<xsl:when test="/metadata/mdContact/rpIndName">
+									<contact-name><xsl:value-of select="/metadata/mdContact/rpIndName"/></contact-name>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:variable name="tmpEmail" select="/metadata/dataIdInfo/idPoC/rpCntInfo/cntAddress/eMailAdd"/>
+									<contact-name><xsl:value-of select="replace(substring-before($tmpEmail,'@noaa.gov'),'\.',' ')"/></contact-name>
+								</xsl:otherwise>
+							</xsl:choose>													
 						</support-role>
 					</xsl:when>
 					<xsl:otherwise>
@@ -329,6 +361,7 @@
 							<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>
 							<contact-email><xsl:value-of select="$defaultMetadataContactEmail"/></contact-email>
 							<contact-type>Person</contact-type>
+							<contact-name><xsl:value-of select="$defaultMetadataContactName"/></contact-name>
 						</support-role>
 					</xsl:otherwise>
 				</xsl:choose>
