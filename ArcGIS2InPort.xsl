@@ -13,13 +13,13 @@
 		<!-- the effective date for contacts is not provided in metadata so must be provided here -->
 		<!--<xsl:variable name="defaultEffectiveDate" select="'2015-5-11'"/>		-->
 		<!-- these variables only need to be filled in if you don't have the various contact roles defined in your metadata -->
-		<xsl:variable name="defaultPointOfContactEmail" select="'somepointofcontact@noaa.gov'" />
-		<xsl:variable name="defaultDataStewardEmail" select="'somedatasteward@noaa.gov'" />
-		<xsl:variable name="defaultMetadataContactEmail" select="'somemetadatacontact@noaa.gov'" />
-		<xsl:variable name="defaultPointOfContactName" select="'First Last'" />
-		<xsl:variable name="defaultDataStewardName" select="'First Last'" />
-		<xsl:variable name="defaultMetadataContactName" select="'First Last'" />		
-		<xsl:variable name="defaultOrganizationName" select="'Some Organization'" />
+		<xsl:variable name="defaultPointOfContactEmail" select="'nopointofcontact@noaa.gov'" />
+		<xsl:variable name="defaultDataStewardEmail" select="'nodatasteward@noaa.gov'" />
+		<xsl:variable name="defaultMetadataContactEmail" select="'nometadatacontact@noaa.gov'" />
+		<xsl:variable name="defaultPointOfContactName" select="'No Point of Contact'" />
+		<xsl:variable name="defaultDataStewardName" select="'No Data Steward'" />
+		<xsl:variable name="defaultMetadataContactName" select="'No Metadata Contact'" />		
+		<xsl:variable name="defaultOrganizationName" select="'No Organization'" />
 		<xsl:variable name="esriCreaDate" select="metadata/Esri/CreaDate" />
 		<xsl:variable name="defaultEffectiveDate" select="concat(concat(concat(concat(concat(substring($esriCreaDate,1,4),'-'),substring($esriCreaDate,5,2)),'-'),substring($esriCreaDate,7,2)),'T')" />		
 
@@ -260,111 +260,153 @@
 			</data-set-information>
 			<support-roles>
 				<!-- Data Steward is required -->
-				<xsl:choose>
-					<xsl:when test="/metadata/dataIdInfo/idCitation/citRespParty/rpCntInfo/cntAddress/eMailAdd">
-						<support-role>
-							<support-role-type>Data Steward</support-role-type>
-							<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>
-							<contact-email><xsl:value-of select="/metadata/dataIdInfo/idCitation/citRespParty/rpCntInfo/cntAddress/eMailAdd"/></contact-email>
-							<contact-type>Person</contact-type>
-							<xsl:choose>
-								<xsl:when test="/metadata/dataIdInfo/idCitation/citRespParty/rpIndName">
-									<contact-name><xsl:value-of select="/metadata/dataIdInfo/idCitation/citRespParty/rpIndName"/></contact-name>
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:variable name="tmpEmail" select="/metadata/dataIdInfo/idCitation/citRespParty/rpCntInfo/cntAddress/eMailAdd"/>
-									<contact-name><xsl:value-of select="replace(substring-before($tmpEmail,'@noaa.gov'),'\.',' ')"/></contact-name>
-								</xsl:otherwise>
-							</xsl:choose>
-						</support-role>
-					</xsl:when>
-					<xsl:otherwise>
-						<support-role>
-							<support-role-type>Data Steward</support-role-type>
-							<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>
-							<contact-email><xsl:value-of select="$defaultDataStewardEmail"/></contact-email>
-							<contact-type>Person</contact-type>
-							<contact-name><xsl:value-of select="$defaultDataStewardName"/></contact-name>
-						</support-role>
-					</xsl:otherwise>
-				</xsl:choose>
+				<xsl:for-each select="/metadata/dataIdInfo/idCitation/citRespParty">
+					<support-role>
+						<support-role-type>Data Steward</support-role-type>
+						<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>	
+						<xsl:choose>
+							<xsl:when test="not(rpIndName) and rpOrgName">
+								<contact-type>Organization</contact-type>
+								<contact-name><xsl:value-of select="rpOrgName"/></contact-name>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:choose>
+									<xsl:when test="rpIndName">
+										<contact-type>Person</contact-type>
+										<contact-name><xsl:value-of select="rpIndName"/></contact-name>
+										<xsl:choose>
+											<xsl:when test="rpCntInfo/cntAddress/eMailAdd">
+												<contact-email><xsl:value-of select="rpCntInfo/cntAddress/eMailAdd"/></contact-email>
+											</xsl:when>
+											<xsl:otherwise>
+												<contact-email><xsl:value-of select="$defaultDataStewardEmail"/></contact-email>
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:choose>
+											<xsl:when test="rpCntInfo/cntAddress/eMailAdd">
+												<contact-type>Person</contact-type>
+												<xsl:variable name="tmpEmail" select="rpCntInfo/cntAddress/eMailAdd"/>
+												<contact-name><xsl:value-of select="translate(substring-before($tmpEmail,'@noaa.gov'),'\.','\ ')"/></contact-name>
+												<contact-email><xsl:value-of select="rpCntInfo/cntAddress/eMailAdd"/></contact-email>
+											</xsl:when>
+											<xsl:otherwise>
+												<contact-type>Person</contact-type>
+												<contact-name><xsl:value-of select="$defaultDataStewardName"/></contact-name>
+												<contact-email><xsl:value-of select="$defaultDataStewardEmail"/></contact-email>
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:otherwise>
+								</xsl:choose>								
+							</xsl:otherwise>
+						</xsl:choose>
+					</support-role>	
+				</xsl:for-each>					
 				<!-- Distributor organization is required -->
-				<xsl:choose>
-					<xsl:when test="/metadata/distInfo/distributor/distorCont/rpOrgName">
-						<support-role>
-							<support-role-type>Distributor</support-role-type>
-							<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>
-							<contact-name><xsl:value-of select="/metadata/distInfo/distributor/distorCont/rpOrgName"/></contact-name>
-							<contact-type>Organization</contact-type>
-						</support-role>
-					</xsl:when>
-					<xsl:otherwise>
-						<support-role>
-							<support-role-type>Distributor</support-role-type>
-							<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>
-							<contact-name><xsl:value-of select="$defaultOrganizationName"/></contact-name>
-							<contact-type>Organization</contact-type>
-						</support-role>
-					</xsl:otherwise>
-				</xsl:choose>
-				<!-- Point of Contact is required. You can have multiple points of contact so we want the one with code 007 which means Point of Contact-->
-				<xsl:choose>
-					<xsl:when test="/metadata/dataIdInfo/idPoC/rpCntInfo/cntAddress/eMailAdd">
-						<support-role>
-							<support-role-type>Point of Contact</support-role-type>
-							<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>
-							<contact-email><xsl:value-of select="/metadata/dataIdInfo/idPoC/rpCntInfo/cntAddress/eMailAdd"/></contact-email>
-							<contact-type>Person</contact-type>
-							<xsl:choose>
-								<xsl:when test="/metadata/dataIdInfo/idPoC/rpIndName">
-									<contact-name><xsl:value-of select="/metadata/dataIdInfo/idPoC/rpIndName"/></contact-name>
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:variable name="tmpEmail" select="/metadata/dataIdInfo/idPoC/rpCntInfo/cntAddress/eMailAdd"/>
-									<contact-name><xsl:value-of select="replace(substring-before($tmpEmail,'@noaa.gov'),'\.',' ')"/></contact-name>
-								</xsl:otherwise>
-							</xsl:choose>							
-						</support-role>
-					</xsl:when>
-					<xsl:otherwise>
-						<support-role>
-							<support-role-type>Point of Contact</support-role-type>
-							<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>
-							<contact-email><xsl:value-of select="$defaultPointOfContactEmail"/></contact-email>
-							<contact-type>Person</contact-type>
-							<contact-name><xsl:value-of select="$defaultPointOfContactName"/></contact-name>
-						</support-role>
-					</xsl:otherwise>
-				</xsl:choose>
+				<xsl:for-each select="/metadata/distInfo/distributor/distorCont">
+					<support-role>
+						<support-role-type>Distributor</support-role-type>
+						<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>	
+						<xsl:choose>
+							<xsl:when test="rpOrgName">
+								<contact-name><xsl:value-of select="rpOrgName"/></contact-name>
+							</xsl:when>
+							<xsl:otherwise>
+								<contact-name><xsl:value-of select="$defaultOrganizationName"/></contact-name>
+							</xsl:otherwise>
+						</xsl:choose>
+					</support-role>	
+				</xsl:for-each>					
+			
+				<!-- Point of Contact is required. -->
+				<xsl:for-each select="/metadata/dataIdInfo/idPoC">
+					<support-role>
+						<support-role-type>Point of Contact</support-role-type>
+						<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>	
+						<xsl:choose>
+							<xsl:when test="not(rpIndName) and rpOrgName">
+								<contact-type>Organization</contact-type>
+								<contact-name><xsl:value-of select="rpOrgName"/></contact-name>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:choose>
+									<xsl:when test="rpIndName">
+										<contact-type>Person</contact-type>
+										<contact-name><xsl:value-of select="rpIndName"/></contact-name>
+										<xsl:choose>
+											<xsl:when test="rpCntInfo/cntAddress/eMailAdd">
+												<contact-email><xsl:value-of select="rpCntInfo/cntAddress/eMailAdd"/></contact-email>
+											</xsl:when>
+											<xsl:otherwise>
+												<contact-email><xsl:value-of select="$defaultPointOfContactEmail"/></contact-email>
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:choose>
+											<xsl:when test="rpCntInfo/cntAddress/eMailAdd">
+												<contact-type>Person</contact-type>
+												<xsl:variable name="tmpEmail" select="rpCntInfo/cntAddress/eMailAdd"/>
+												<contact-name><xsl:value-of select="translate(substring-before($tmpEmail,'@noaa.gov'),'\.','\ ')"/></contact-name>
+												<contact-email><xsl:value-of select="rpCntInfo/cntAddress/eMailAdd"/></contact-email>
+											</xsl:when>
+											<xsl:otherwise>
+												<contact-type>Person</contact-type>
+												<contact-name><xsl:value-of select="$defaultPointOfContactName"/></contact-name>
+												<contact-email><xsl:value-of select="$defaultPointOfContactEmail"/></contact-email>
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:otherwise>
+								</xsl:choose>								
+							</xsl:otherwise>
+						</xsl:choose>
+					</support-role>	
+				</xsl:for-each>					
 				<!-- Metadata Point of Contact is required -->
-				<xsl:choose>
-					<xsl:when test="/metadata/mdContact/rpCntInfo/cntAddress/eMailAdd">
-						<support-role>
-							<support-role-type>Metadata Contact</support-role-type>
-							<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>
-							<contact-email><xsl:value-of select="/metadata/mdContact/rpCntInfo/cntAddress/eMailAdd"/></contact-email>
-							<contact-type>Person</contact-type>
-							<xsl:choose>
-								<xsl:when test="/metadata/mdContact/rpIndName">
-									<contact-name><xsl:value-of select="/metadata/mdContact/rpIndName"/></contact-name>
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:variable name="tmpEmail" select="/metadata/dataIdInfo/idPoC/rpCntInfo/cntAddress/eMailAdd"/>
-									<contact-name><xsl:value-of select="replace(substring-before($tmpEmail,'@noaa.gov'),'\.',' ')"/></contact-name>
-								</xsl:otherwise>
-							</xsl:choose>													
-						</support-role>
-					</xsl:when>
-					<xsl:otherwise>
-						<support-role>
-							<support-role-type>Metadata Contact</support-role-type>
-							<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>
-							<contact-email><xsl:value-of select="$defaultMetadataContactEmail"/></contact-email>
-							<contact-type>Person</contact-type>
-							<contact-name><xsl:value-of select="$defaultMetadataContactName"/></contact-name>
-						</support-role>
-					</xsl:otherwise>
-				</xsl:choose>
+				<xsl:for-each select="/metadata/mdContact">
+					<support-role>
+						<support-role-type>Metadata Contact</support-role-type>
+						<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>	
+						<xsl:choose>
+							<xsl:when test="not(rpIndName) and rpOrgName">
+								<contact-type>Organization</contact-type>
+								<contact-name><xsl:value-of select="rpOrgName"/></contact-name>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:choose>
+									<xsl:when test="rpIndName">
+										<contact-type>Person</contact-type>
+										<contact-name><xsl:value-of select="rpIndName"/></contact-name>
+										<xsl:choose>
+											<xsl:when test="rpCntInfo/cntAddress/eMailAdd">
+												<contact-email><xsl:value-of select="rpCntInfo/cntAddress/eMailAdd"/></contact-email>
+											</xsl:when>
+											<xsl:otherwise>
+												<contact-email><xsl:value-of select="$defaultMetadataContactEmail"/></contact-email>
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:choose>
+											<xsl:when test="rpCntInfo/cntAddress/eMailAdd">
+												<contact-type>Person</contact-type>
+												<xsl:variable name="tmpEmail" select="rpCntInfo/cntAddress/eMailAdd"/>
+												<contact-name><xsl:value-of select="translate(substring-before($tmpEmail,'@noaa.gov'),'\.','\ ')"/></contact-name>
+												<contact-email><xsl:value-of select="rpCntInfo/cntAddress/eMailAdd"/></contact-email>
+											</xsl:when>
+											<xsl:otherwise>
+												<contact-type>Person</contact-type>
+												<contact-name><xsl:value-of select="$defaultMetadataContactName"/></contact-name>
+												<contact-email><xsl:value-of select="$defaultMetadataContactEmail"/></contact-email>
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:otherwise>
+								</xsl:choose>								
+							</xsl:otherwise>
+						</xsl:choose>
+					</support-role>	
+				</xsl:for-each>					
 			</support-roles>
 			<extents>
 				<currentness-reference>Publication Date</currentness-reference>
