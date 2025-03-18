@@ -307,6 +307,7 @@
 				<xsl:for-each select="/metadata/distInfo/distributor/distorCont">
 					<support-role>
 						<support-role-type>Distributor</support-role-type>
+						<contact-type>Organization</contact-type>
 						<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>	
 						<xsl:choose>
 							<xsl:when test="rpOrgName">
