@@ -265,7 +265,7 @@
 						<support-role-type>Data Steward</support-role-type>
 						<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>	
 						<xsl:choose>
-							<xsl:when test="not(rpIndName) and rpOrgName">
+							<xsl:when test="not(rpIndName) and not(rpCntInfo/cntAddress/eMailAdd) and rpOrgName">
 								<contact-type>Organization</contact-type>
 								<contact-name><xsl:value-of select="rpOrgName"/></contact-name>
 							</xsl:when>
@@ -326,7 +326,7 @@
 						<support-role-type>Point of Contact</support-role-type>
 						<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>	
 						<xsl:choose>
-							<xsl:when test="not(rpIndName) and rpOrgName">
+							<xsl:when test="not(rpIndName) and not(rpCntInfo/cntAddress/eMailAdd) and rpOrgName">
 								<contact-type>Organization</contact-type>
 								<contact-name><xsl:value-of select="rpOrgName"/></contact-name>
 							</xsl:when>
@@ -370,7 +370,7 @@
 						<support-role-type>Metadata Contact</support-role-type>
 						<from-date><xsl:value-of select="substring-before($defaultEffectiveDate,'T')"/></from-date>	
 						<xsl:choose>
-							<xsl:when test="not(rpIndName) and rpOrgName">
+							<xsl:when test="not(rpIndName) and not(rpCntInfo/cntAddress/eMailAdd) and rpOrgName">
 								<contact-type>Organization</contact-type>
 								<contact-name><xsl:value-of select="rpOrgName"/></contact-name>
 							</xsl:when>
