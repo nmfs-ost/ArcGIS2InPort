@@ -8,8 +8,8 @@
 		<!-- added/modified TJH -->
 		<!-- some variables to use ... -->
 		<!-- When creating a new record, just specify parentCatalogItemId, when updating, only specify catalogItemId -->
-		<!--<xsl:variable name="parentCatalogItemId" select="'[parentCatalogItemId]'" />	-->
-		<!--<xsl:variable name="catalogItemId" select="'[catalogItemId]'" /> -->
+		<!--<xsl:variable name="parentCatalogItemId" select="'99999'" />	-->
+		<!--<xsl:variable name="catalogItemId" select="''" /> -->
 		<!-- the effective date for contacts is not provided in metadata so must be provided here -->
 		<!--<xsl:variable name="defaultEffectiveDate" select="'2015-5-11'"/>		-->
 		<!-- these variables only need to be filled in if you don't have the various contact roles defined in your metadata -->
