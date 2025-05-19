@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<inport-metadata version="1.11" source="https://www.fisheries.noaa.gov" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<item-identification>
+		<catalog-item-type>Data Set</catalog-item-type>
+		<title>PolygonExample_Polygon2PointsScript</title>
+		<status/>
+		<abstract></abstract>
+		<purpose></purpose>
+		<publication-date></publication-date>
+	</item-identification>
+	<keywords/>
+	<physical-location>
+		<city></city>
+		<state-province></state-province>
+	</physical-location>
+	<data-set-information>
+		<data-set-scope-code>Data Set</data-set-scope-code>
+		<maintenance-frequency/>
+		<data-presentation-form>Map (digital)</data-presentation-form>
+	</data-set-information>
+	<support-roles></support-roles>
+	<extents>
+		<currentness-reference>Publication Date</currentness-reference>
+	</extents>
+	<access-information>
+		<security-class>Unclassified</security-class>
+	</access-information>
+	<distribution-information></distribution-information>
+	<urls></urls>
+	<technical-environment>
+		<description>Microsoft Windows 10 Version 10.0 (Build 19045) ; Esri ArcGIS 13.5.0.57366</description>
+	</technical-environment>
+	<data-quality>
+		<accuracy></accuracy>
+		<horizontal-positional-accuracy></horizontal-positional-accuracy>
+		<completeness-report></completeness-report>
+		<conceptual-consistency></conceptual-consistency>
+	</data-quality>
+	<lineage>
+		<lineage-statement></lineage-statement>
+		<lineage-sources></lineage-sources>
+		<lineage-process-steps></lineage-process-steps>
+	</lineage>
+	<entity-attribute-information>
+		<entity>
+			<item-identification>
+				<title>PolygonExample_Polygon2PointsScript</title>
+			</item-identification>
+			<entity-information>
+				<entity-type>Data Table</entity-type>
+				<active-version>Yes</active-version>
+				<description>; Source: </description>
+			</entity-information>
+			<data-attributes>
+				<data-attribute>
+					<seq-order>1</seq-order>
+					<name>OBJECTID</name>
+					<data-storage-type>n/a</data-storage-type>
+					<status>Active</status>
+					<description>Internal feature number.; Source: Esri</description>
+					<allowed-values>Sequential unique whole numbers that are automatically generated.</allowed-values>
+				</data-attribute>
+				<data-attribute>
+					<seq-order>2</seq-order>
+					<name>Shape</name>
+					<data-storage-type>n/a</data-storage-type>
+					<status>Active</status>
+					<description>Feature geometry.; Source: Esri</description>
+					<allowed-values>Coordinates defining the features.</allowed-values>
+				</data-attribute>
+			</data-attributes>
+		</entity>
+	</entity-attribute-information>
+</inport-metadata>
