@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inport-metadata xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.9">
+   <item-identification>
+      <parent-catalog-item-id>65591</parent-catalog-item-id>
+      <!--catalog-item-id>21853</catalog-item-id-->
+      <catalog-item-type>Data Set</catalog-item-type>
+      <metadata-workflow-state>Draft</metadata-workflow-state>
+      <title>Blank DS</title>
+      <status>In Work</status>
+   </item-identification>
+   <data-set-information/>
+   <catalog-details>
+      <owner-org-name>InPort Support Organization (Built-In)</owner-org-name>
+      <owner-org-acro>INP</owner-org-acro>
+      <catalog-control-state>4</catalog-control-state>
+      <parent-cat-type-code>PRJ</parent-cat-type-code>
+      <parent-title>Standard Test Items</parent-title>
+      <created-by>SysAdmin InPortAdmin</created-by>
+      <created-by-pers-id>0</created-by-pers-id>
+      <record-created>20140710T181629</record-created>
+      <record-last-modified>20140710T181629</record-last-modified>
+      <publication-status>Never Published</publication-status>
+      <linking-share-level>Project</linking-share-level>
+      <is-do-not-publish>No</is-do-not-publish>
+   </catalog-details>
+</inport-metadata>
