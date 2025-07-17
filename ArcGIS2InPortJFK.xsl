@@ -49,6 +49,26 @@
 				</xsl:choose>
 				-->
 				<!-- end added/modified TJH -->
+				<!-- added/modified JFK 5/29/2025 -->								
+				<xsl:variable name="mdFileID" select="metadata/mdFileID" />
+				<xsl:choose>
+					<xsl:when test="contains($mdFileID,'inport:')">
+						<catalog-item-id><xsl:value-of select="substring-after($mdFileID,'inport:')"/></catalog-item-id>	
+					</xsl:when>
+					<xsl:otherwise>
+						<catalog-item-id><xsl:value-of select="metadata/mdFileID"/></catalog-item-id>
+					</xsl:otherwise>
+				</xsl:choose>
+				<xsl:variable name="mdParentID" select="metadata/mdParentID" />
+				<xsl:choose>
+					<xsl:when test="contains($mdParentID,'inport:')">
+						<parent-catalog-item-id><xsl:value-of select="substring-after($mdParentID,'inport:')"/></parent-catalog-item-id>	
+					</xsl:when>
+					<xsl:otherwise>
+						<parent-catalog-item-id><xsl:value-of select="metadata/mdParentID"/></parent-catalog-item-id>
+					</xsl:otherwise>
+				</xsl:choose>				
+				<!-- end added/modified JFK 5/28/2025 -->				
 				<status>
 					<xsl:for-each select="(/metadata/dataIdInfo[1]/idStatus/ProgCd/@value)[1]">
 						<xsl:choose>

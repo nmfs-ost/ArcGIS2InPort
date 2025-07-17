@@ -152,24 +152,17 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
-
+EDMW 2022 Tutorial Write ArcGIS metadata for 100 InPort score.pptx
+metadataArcGIS2InPort03.py
+InPort.gdb
 .pyHistory
-
 Archive
-
-
+user_credentials.py
+inport-xml.xml
+ArcGIS Metadata Details.xlsx
+InPort.aprx
 GpMessages
 dev
-
-*.atbx
-*.aprx
-*.gdb
-
-*.xlsx
-*.py
-*.docx
-*.pptx
-*.json
-*.txt
-*.ini
-*.xml
+InPort.atbx
+InPort.aprx
+InPort - Copy.aprx
