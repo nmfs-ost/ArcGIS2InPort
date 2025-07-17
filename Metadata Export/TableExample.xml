@@ -1,0 +1,493 @@
+<metadata xml:lang="en">
+	<Esri>
+		<CreaDate>20250709</CreaDate>
+		<CreaTime>18332500</CreaTime>
+		<ArcGISFormat>1.0</ArcGISFormat>
+		<SyncOnce>FALSE</SyncOnce>
+		<DataProperties>
+			<lineage>
+				<Process ToolSource="c:\users\john.f.kennedy\appdata\local\programs\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CreateFishnet" Date="20250709" Time="183325">CreateFishnet C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb\PolygonExample "-82 27" "-82 30" 0.25 0.25 # # "-80 30" LABELS # POLYGON</Process>
+				<Process ToolSource="c:\users\john.f.kennedy\appdata\local\programs\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\Rename" Date="20250709" Time="183326">Rename C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb\PolygonExample_label C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb\PointExample FeatureClass</Process>
+				<Process ToolSource="c:\users\john.f.kennedy\appdata\local\programs\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\AddFields" Date="20250709" Time="183334">AddFields C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb\PointExample "Latitude DOUBLE # # # #;Longitude DOUBLE # # # #" #</Process>
+				<Process ToolSource="c:\users\john.f.kennedy\appdata\local\programs\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateGeometryAttributes" Date="20250709" Time="183334">CalculateGeometryAttributes C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb\PointExample "Latitude POINT_Y;Longitude POINT_X" # # # SAME_AS_INPUT</Process>
+				<Process ToolSource="c:\users\john.f.kennedy\appdata\local\programs\arcgis\pro\Resources\ArcToolbox\toolboxes\Conversion Tools.tbx\ExportTable" Date="20250709" Time="183336">ExportTable C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb\PointExample C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb\TableExample # NOT_USE_ALIAS "Latitude "Latitude" true true false 8 Double 0 0,First,#,C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb\PointExample,Latitude,-1,-1;Longitude "Longitude" true true false 8 Double 0 0,First,#,C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb\PointExample,Longitude,-1,-1" #</Process>
+			</lineage>
+			<itemProps>
+				<itemName Sync="TRUE">TableExample</itemName>
+				<itemLocation>
+					<linkage Sync="TRUE">file://\\HQSTL4365813\C$\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb</linkage>
+					<protocol Sync="TRUE">Local Area Network</protocol>
+				</itemLocation>
+				<imsContentType Sync="TRUE">002</imsContentType>
+			</itemProps>
+		</DataProperties>
+		<SyncDate>20250709</SyncDate>
+		<SyncTime>18345000</SyncTime>
+		<ModDate>20250709</ModDate>
+		<ModTime>18345000</ModTime>
+		<scaleRange>
+			<minScale>150000000</minScale>
+			<maxScale>5000</maxScale>
+		</scaleRange>
+	</Esri>
+	<dataIdInfo>
+		<idAbs>My Description</idAbs>
+		<idCitation>
+			<resTitle>TableExample</resTitle>
+			<date>
+				<pubDate>2025-01-01T00:00:00</pubDate>
+			</date>
+			<presForm>
+				<PresFormCd value="011"/>
+				<fgdcGeoform>tabular digital data</fgdcGeoform>
+			</presForm>
+			<citRespParty>
+				<rpIndName>Timothy J Haverland</rpIndName>
+				<rpOrgName>NMFS Office of Science and Technology</rpOrgName>
+				<rpCntInfo>
+					<cntAddress>
+						<eMailAdd>tim.haverland@noaa.gov</eMailAdd>
+					</cntAddress>
+					<cntOnlineRes>
+						<linkage>https://www.fisheries.noaa.gov/about/office-science-and-technology</linkage>
+						<protocol>Web Application</protocol>
+						<orName>NMFS Office of Science and Technology</orName>
+						<orDesc>NOAA Fisheries OST</orDesc>
+						<orFunct>
+							<OnFunctCd value="002"/>
+						</orFunct>
+					</cntOnlineRes>
+				</rpCntInfo>
+				<role>
+					<RoleCd value="002"/>
+				</role>
+			</citRespParty>
+		</idCitation>
+		<dataExt>
+			<exDesc>These data represents an approximate distribution of the listed entity based on the best available information from [date of first source] to [date of final species expert review].</exDesc>
+			<geoEle>
+				<GeoBndBox esriExtentType="search">
+					<westBL>-180.00</westBL>
+					<eastBL>180.00</eastBL>
+					<northBL>90.00</northBL>
+					<southBL>-90.00</southBL>
+					<exTypeCode>1</exTypeCode>
+				</GeoBndBox>
+			</geoEle>
+			<tempEle>
+				<TempExtent>
+					<exTemp>
+						<TM_Instant>
+							<tmPosition>2025-04-09T17:12:14</tmPosition>
+						</TM_Instant>
+					</exTemp>
+				</TempExtent>
+			</tempEle>
+		</dataExt>
+		<idPoC>
+			<rpIndName>Melissa Ann Karp</rpIndName>
+			<rpOrgName>NMFS Office of Science and Technology</rpOrgName>
+			<rpCntInfo>
+				<cntAddress>
+					<eMailAdd>melissa.karp@noaa.gov</eMailAdd>
+				</cntAddress>
+				<cntOnlineRes>
+					<linkage>https://www.fisheries.noaa.gov/about/office-science-and-technology</linkage>
+					<protocol>Web Application</protocol>
+					<orName>NMFS Office of Science and Technology</orName>
+					<orDesc>NOAA Fisheries OST</orDesc>
+					<orFunct>
+						<OnFunctCd value="002"/>
+					</orFunct>
+				</cntOnlineRes>
+			</rpCntInfo>
+			<role>
+				<RoleCd value="007"/>
+			</role>
+		</idPoC>
+		<searchKeys>
+			<keyword>TableExample</keyword>
+		</searchKeys>
+		<idPurp>My Summary</idPurp>
+		<idCredit>My Credits</idCredit>
+		<resConst>
+			<Consts>
+				<useLimit>***No Warranty*** The user assumes the entire risk related to its use of these data. NMFS is providing these data 'as is' and NMFS disclaims any and all warranties, whether express or implied, including (without limitation) any implied warranties of merchantability or fitness for a particular purpose. No warranty expressed or implied is made regarding the accuracy or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. It is strongly recommended that careful attention be paid to the contents of the metadata file associated with these data to evaluate dataset limitations, restrictions or intended use. In no event will NMFS be liable to you or to any third party for any direct, indirect, incidental, consequential, special or exemplary damages or lost profit resulting from any use or misuse of these data.</useLimit>
+			</Consts>
+		</resConst>
+		<resConst>
+			<LegConsts>
+				<useLimit>Data License:
+CC0-1.0
+Data License URL:
+https://creativecommons.org/publicdomain/zero/1.0/
+Data License Statement:
+These data were produced by NOAA and are not subject to copyright protection in the United States. NOAA waives any potential copyright and related rights in these data worldwide through the Creative Commons Zero 1.0 Universal Public Domain Dedication (CC0-1.0).</useLimit>
+			</LegConsts>
+		</resConst>
+		<resConst>
+			<SecConsts>
+				<useLimit>Data License Type
+
+All Internal NOAA Source Data that are appropriate for public release (not classified or controlled unclassified information) should be formally dedicated to the public domain via the Creative Commons 1.0 Universal Public Domain Dedication (CC0-1.0).
+
+For more information, please see the NOAA Open Data Licensing Guidance (NOAA Account required).</useLimit>
+				<class>
+					<ClasscationCd value="001"/>
+				</class>
+				<classSys>FISMA Low</classSys>
+			</SecConsts>
+		</resConst>
+		<dataLang>
+			<languageCode value="eng"/>
+			<countryCode value="US"/>
+		</dataLang>
+		<dataChar>
+			<CharSetCd value="004"/>
+		</dataChar>
+		<spatRpType>
+			<SpatRepTypCd value="003" Sync="TRUE"></SpatRepTypCd></spatRpType>
+		<envirDesc Sync="TRUE">Microsoft Windows 10 Version 10.0 (Build 19045) ; Esri ArcGIS 13.5.2.57366</envirDesc>
+		<idStatus>
+			<ProgCd value="001"/>
+		</idStatus>
+		<resMaint>
+			<maintFreq>
+				<MaintFreqCd value="009"/>
+			</maintFreq>
+		</resMaint>
+		<themeKeys>
+			<keyword>Theme Keys; separated by a semicolon</keyword>
+			<thesaName>
+				<resTitle>Global Change Master Directory (GCMD) Science Keyword</resTitle>
+				<date>
+					<pubDate>2020-10-14T14:29:23</pubDate>
+				</date>
+				<citOnlineRes>
+					<linkage>https://www.fisheries.noaa.gov/inport/help/components/keywords</linkage>
+					<protocol>Web Application</protocol>
+					<orName>GCMD</orName>
+					<orDesc>Global Change Master Directory (GCMD) Science Keywords</orDesc>
+					<orFunct>
+						<OnFunctCd value="002"/>
+					</orFunct>
+				</citOnlineRes>
+			</thesaName>
+			<thesaLang>
+				<languageCode value="eng"/>
+				<countryCode value="US"/>
+			</thesaLang>
+		</themeKeys>
+		<placeKeys>
+			<keyword>Enter place/geography keywords; separated by a semicolon</keyword>
+			<thesaName>
+				<resTitle>Global Change Master Directory (GCMD) Location Keywords</resTitle>
+				<citOnlineRes>
+					<linkage>https://www.fisheries.noaa.gov/inport/help/components/keywords</linkage>
+					<protocol>Web Application</protocol>
+					<orName>GCMD</orName>
+					<orDesc>Global Change Master Directory (GCMD) Science Keywords</orDesc>
+					<orFunct>
+						<OnFunctCd value="002"/>
+					</orFunct>
+				</citOnlineRes>
+				<date>
+					<pubDate>2020-10-14T14:29:23</pubDate>
+				</date>
+			</thesaName>
+			<thesaLang>
+				<languageCode value="eng"/>
+				<countryCode value="US"/>
+			</thesaLang>
+		</placeKeys>
+		<tempKeys>
+			<keyword>Enter temporal keywords; separated by a semicolon</keyword>
+			<thesaName>
+				<resTitle>Global Change Master Directory (GCMD) Temporal Data Resolution Keywords</resTitle>
+				<citOnlineRes>
+					<linkage>https://www.fisheries.noaa.gov/inport/help/components/keywords</linkage>
+					<protocol>Web Application</protocol>
+					<orName>GCMD</orName>
+					<orDesc>Global Change Master Directory (GCMD) Science Keywords</orDesc>
+					<orFunct>
+						<OnFunctCd value="002"/>
+					</orFunct>
+				</citOnlineRes>
+				<date>
+					<pubDate>2020-10-14T14:29:23</pubDate>
+				</date>
+			</thesaName>
+			<thesaLang>
+				<languageCode value="eng"/>
+				<countryCode value="US"/>
+			</thesaLang>
+		</tempKeys>
+		<discKeys>
+			<keyword>ITIS; separated by a semicolon</keyword>
+			<thesaName>
+				<resTitle>Integrated Taxonomic Information System (ITIS)</resTitle>
+				<citOnlineRes>
+					<linkage>https://www.itits.org</linkage>
+					<protocol>Web Application</protocol>
+					<orName>ITIS</orName>
+					<orDesc>Integrated Taxonomic Information System (ITIS)</orDesc>
+					<orFunct>
+						<OnFunctCd value="002"/>
+					</orFunct>
+				</citOnlineRes>
+				<date>
+					<createDate>2020-10-14T14:29:23</createDate>
+				</date>
+				<thesaLang>
+					<languageCode value="eng"/>
+					<countryCode value="US"/>
+				</thesaLang>
+			</thesaName>
+		</discKeys>
+		<tpCat>
+			<TopicCatCd value="002"/>
+		</tpCat>
+		<tpCat>
+			<TopicCatCd value="007"/>
+		</tpCat>
+		<tpCat>
+			<TopicCatCd value="014"/>
+		</tpCat>
+	</dataIdInfo>
+	<dqInfo>
+		<dqScope>
+			<scpLvl>
+				<ScopeCd value="005"/>
+			</scpLvl>
+			<scpLvlDesc>
+				<datasetSet>Tabular Digital Data</datasetSet>
+			</scpLvlDesc>
+		</dqScope>
+		<dataLineage>
+			<statement>These data were created in [month year] from the parameters outlined in the most recent 5-Year Review (NMFS [year], see source citation). The data has not been clipped to a shoreline. Please assume that all range data extend to the shoreline. Please see the attribute table for specific attributes for this species, as listed under the ESA</statement>
+			<dataSource type="">
+				<srcDesc>National Marine Fisheries Service. [year]. [common name] ([scientific Name) Five-Year Status Review: Summary and Evaluation. [region] Region. [city, state].</srcDesc>
+				<srcMedName>
+					<MedNameCd value="015"/>
+				</srcMedName>
+				<srcCitatn>
+					<resTitle>[common name] ([scientific Name) Five-Year Status Review: Summary and Evaluation</resTitle>
+					<date>
+						<pubDate>2025-01-01T00:00:00</pubDate>
+					</date>
+					<citOnlineRes>
+						<linkage>https://www.fisheries.noaa.gov</linkage>
+						<protocol>Web Application</protocol>
+						<orName>NOAA Fisheries Resources</orName>
+						<orDesc>The first, formal five-year review for [common name]. The original status review was completed in [year] ([reference]) for the final listing decision.</orDesc>
+						<orFunct>
+							<OnFunctCd value="002"/>
+						</orFunct>
+					</citOnlineRes>
+					<presForm>
+						<PresFormCd value="001"/>
+						<fgdcGeoform>Document</fgdcGeoform>
+					</presForm>
+					<citRespParty>
+						<rpIndName>Melissa Ann Karp</rpIndName>
+						<rpOrgName>NMFS Office of Science and Technology</rpOrgName>
+						<rpCntInfo>
+							<cntAddress>
+								<eMailAdd>melissa.karp@noaa.gov</eMailAdd>
+							</cntAddress>
+							<cntOnlineRes>
+								<linkage>https://www.fisheries.noaa.gov/about/office-science-and-technology</linkage>
+								<protocol>Web Application</protocol>
+								<orName>NMFS Office of Science and Technology</orName>
+								<orDesc>NOAA Fisheries OST</orDesc>
+								<orFunct>
+									<OnFunctCd value="002"/>
+								</orFunct>
+							</cntOnlineRes>
+						</rpCntInfo>
+						<role>
+							<RoleCd value="008"/>
+						</role>
+					</citRespParty>
+				</srcCitatn>
+			</dataSource>
+			<prcStep>
+				<stepDesc>ESA and Critical Habitat staff use many different methods and GIS tools to process data. To review details of the geoprocessing history for these data, please see the following in ArcGIS Pro Metadata Editor: Contents &gt; Resource &gt; Geoprocessing History</stepDesc>
+				<stepDateTm>2025-01-01T00:00:00</stepDateTm>
+				<stepProc>
+					<rpIndName>John F Kennedy</rpIndName>
+					<rpOrgName>NMFS Office of Science and Technology</rpOrgName>
+					<rpCntInfo>
+						<cntAddress>
+							<eMailAdd>john.f.kennedy@noaa.gov</eMailAdd>
+						</cntAddress>
+						<cntOnlineRes>
+							<linkage>https://www.fisheries.noaa.gov/about/office-science-and-technology</linkage>
+							<protocol>Web Application</protocol>
+							<orName>NMFS Office of Science and Technology</orName>
+							<orDesc>NOAA Fisheries OST</orDesc>
+							<orFunct>
+								<OnFunctCd value="002"/>
+							</orFunct>
+						</cntOnlineRes>
+					</rpCntInfo>
+					<role>
+						<RoleCd value="009"/>
+					</role>
+				</stepProc>
+				<stepSrc type="used">
+					<srcDesc>The title or description of one of the data sources</srcDesc>
+					<srcMedName>
+						<MedNameCd value="015"/>
+					</srcMedName>
+				</stepSrc>
+			</prcStep>
+		</dataLineage>
+		<report type="DQConcConsis" dimension="horizontal">
+			<measDesc>no missing attribute values</measDesc>
+			<measResult>
+				<ConResult>
+					<conSpec>
+						<resTitle>Specification Title</resTitle>
+						<date>
+							<pubDate>2025-01-01T00:00:00</pubDate>
+						</date>
+					</conSpec>
+					<conExpl>Attribute values confirmed and checked via team review.</conExpl>
+					<conPass>1</conPass>
+				</ConResult>
+			</measResult>
+		</report>
+	</dqInfo>
+	<distInfo>
+		<distTranOps>
+			<unitsODist>MB</unitsODist>
+			<transSize>0</transSize>
+			<onLineSrc>
+				<linkage>https://www.fisheries.noaa.gov/science-and-data</linkage>
+				<protocol>ESRI File Geodatabase</protocol>
+				<orName>File Geodatabase Name</orName>
+				<orDesc>File Geodatabase</orDesc>
+				<orFunct>
+					<OnFunctCd value="002"/>
+				</orFunct>
+			</onLineSrc>
+			<onLineSrc>
+				<linkage>https://services2.arcgis.com/C8EMgrsFcRFL6LrL/arcgis/rest/services/Species_Filter/FeatureServer</linkage>
+				<protocol>ESRI Web Application</protocol>
+				<orName>Species Filter 20250101</orName>
+				<orDesc>Dataset Feature Service</orDesc>
+				<orFunct>
+					<OnFunctCd value="002"/>
+				</orFunct>
+			</onLineSrc>
+		</distTranOps>
+		<distFormat>
+			<formatName Sync="FALSE">ESRI REST Service</formatName>
+			<formatVer>Esri ArcGIS 13.4.0.55405</formatVer>
+			<fileDecmTech>Zip</fileDecmTech>
+			<formatInfo>NMFS OST DisMAP</formatInfo>
+		</distFormat>
+		<distributor>
+			<distorCont>
+				<rpIndName>NMFS Office of Science and Technology</rpIndName>
+				<rpOrgName>NMFS Office of Science and Technology</rpOrgName>
+				<role>
+					<RoleCd value="005"/>
+				</role>
+				<rpCntInfo>
+					<cntAddress>
+						<eMailAdd>tim.haverland@noaa.gov</eMailAdd>
+					</cntAddress>
+					<cntOnlineRes>
+						<linkage>https://www.fisheries.noaa.gov/about/office-science-and-technology</linkage>
+						<protocol>Web Application</protocol>
+						<orName>NMFS Office of Science and Technology</orName>
+						<orDesc>NOAA Fisheries OST</orDesc>
+						<orFunct>
+							<OnFunctCd value="002"/>
+						</orFunct>
+					</cntOnlineRes>
+				</rpCntInfo>
+			</distorCont>
+		</distributor>
+	</distInfo>
+	<mdFileID>gov.noaa.nmfs.inport:</mdFileID>
+	<mdParentID>gov.noaa.nmfs.inport:</mdParentID>
+	<mdHrLv>
+		<ScopeCd value="005"/>
+	</mdHrLv>
+	<mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+	<mdMaint>
+		<maintFreq>
+			<MaintFreqCd value="009"/>
+		</maintFreq>
+	</mdMaint>
+	<mdDateSt Sync="TRUE">20250709</mdDateSt>
+	<mdLang>
+		<languageCode value="eng"/>
+		<countryCode value="USA"/>
+	</mdLang>
+	<mdChar>
+		<CharSetCd value="004"/>
+	</mdChar>
+	<mdContact>
+		<rpIndName>John F Kennedy</rpIndName>
+		<rpOrgName>NMFS Office of Science and Technology</rpOrgName>
+		<rpCntInfo>
+			<cntAddress>
+				<eMailAdd>john.f.kennedy@noaa.gov</eMailAdd>
+			</cntAddress>
+			<cntOnlineRes>
+				<linkage>https://www.fisheries.noaa.gov/about/office-science-and-technology</linkage>
+				<protocol>Web Application</protocol>
+				<orName>NMFS Office of Science and Technology</orName>
+				<orDesc>NOAA Fisheries OST</orDesc>
+				<orFunct>
+					<OnFunctCd value="002"/>
+				</orFunct>
+			</cntOnlineRes>
+		</rpCntInfo>
+		<role>
+			<RoleCd value="011"/>
+		</role>
+	</mdContact>
+	<eainfo>
+		<detailed Name="TableExample">
+			<enttyp>
+				<enttypl Sync="TRUE">TableExample</enttypl>
+				<enttypt Sync="TRUE">Table</enttypt>
+				<enttypc Sync="TRUE">96</enttypc>
+			</enttyp>
+			<attr>
+				<attrlabl Sync="TRUE">OBJECTID</attrlabl>
+				<attalias Sync="TRUE">OID</attalias>
+				<attrtype Sync="TRUE">OID</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef Sync="TRUE">Internal feature number.</attrdef>
+				<attrdefs Sync="TRUE">Esri</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">Latitude</attrlabl>
+				<attalias Sync="TRUE">Latitude</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attwidth Sync="TRUE">8</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">Longitude</attrlabl>
+				<attalias Sync="TRUE">Longitude</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attwidth Sync="TRUE">8</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+		</detailed>
+	</eainfo>
+</metadata>

@@ -1,0 +1,76 @@
+1) Specifies how and which elements in the metadata are updated with current 
+properties of the data.
+
+2) Some metadata elements should always be derived from the item's properties, 
+such as its spatial reference. Some metadata elements can be initialized by 
+the properties of the item, but would typically be updated by a person to 
+better characterize the item before the metadata is shared, such the title of 
+the item.
+
+3) When a metadata element is created and its value is initialized by 
+synchronization, the XML element in which the value is stored has a Sync 
+attribute, and its value is set to True. Typically, a metadata element's value 
+will only be synchronized when the Sync attribute is set to True. When the 
+element's value is updated using the ArcGIS metadata editor, the Sync attribute
+is removed. Alternatively, an application could change the attribute's value to
+False to achieve the same result.
+
+1) ACCESSED
+	a) Properties are updated in the item's metadata for appropriate metadata
+	   elements where the Sync attribute value is True. 
+	b) The update will take place if at least the amount of time specified by 
+	   the interval parameter has elapsed since the last time the item's 
+	   metadata content was synchronized. 
+	c) Metadata is created if it doesn't already exist.
+	d) 193 lines, Sync="TRUE", 
+
+2) ALWAYS
+	a) Properties are updated in the item's metadata for appropriate metadata 
+	   elements where the Sync attribute value is True. 
+	b) Metadata content will be updated appropriately at the time the function 
+	   is used; a time specified by the interval parameter is not used, if one 
+	   has been provided.
+	c) Metadata is created if it doesn't already exist.
+	d) 193 lines
+
+3) CREATED
+	a) Metadata is created and properties are added to it only if metadata 
+	   doesn't exist yet for the item.
+	b) 16 lines
+	   
+4) NOT_CREATED
+	a) Properties are updated in existing metadata only. 
+	b) Appropriate element values are updated if its Sync attribute value is True.
+	c) 193 lines
+
+5) OVERWRITE
+	a) All property values that can be synchronized are updated in the item's 
+	   metadata, regardless of the value or presence of the Sync attribute on 
+	   these metadata elements. 
+	b) After this function is used, all metadata elements that have been 
+	   updated will have a Sync attribute with the value True. 
+		i) For example, after copying metadata from one item to another, use 
+		   this option to initialize all properties in a manner that is 
+		   appropriate for the item, including the title, which should be 
+		   changed to match the new item's name instead of using a title that
+		   describes the old item.
+	c) Metadata content will be updated appropriately at the time the function 
+	   is used; a time specified by the interval parameter is not used, if one 
+	   has been provided. 
+	d) Metadata is created if it doesn't already exist.
+	e) 193 lines, has elements imsContentType and resTitle
+
+6) SELECTIVE
+	a) Generally the same as the OVERWRITE option. 
+	b) However, the values of the Title and Content Type metadata elements are
+       not updated. 
+		i) For example, if you import a standard-format metadata document to 
+		   the item that describes the item's data, the title in the imported 
+		   document does apply to the item, and it will not be overwritten. 
+	c) All other properties in the item's metadata will be initialized in a 
+	   manner appropriate for the item.
+	d) Metadata content will be updated appropriately at the time the function 
+	   is used; a time specified by the interval parameter is not used, if one
+	   has been provided. 
+	e) Metadata is created if it doesn't already exist.
+	d) 191 lines

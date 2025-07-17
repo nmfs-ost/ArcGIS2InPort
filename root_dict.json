@@ -1,0 +1,22 @@
+{
+    "Esri": 0,
+    "dataIdInfo": 1,
+    "dqInfo": 2,
+    "distInfo": 3,
+    "mdFileID": 4,
+    "mdParentID": 5,
+    "mdHrLv": 6,
+    "mdHrLvName": 7,
+    "mdMaint": 8,
+    "mdDateSt": 9,
+    "mdLang": 10,
+    "mdChar": 11,
+    "mdContact": 12,
+    "refSysInfo": 13,
+    "spatRepInfo": 14,
+    "spdoinfo": 15,
+    "spref": 16,
+    "contInfo": 17,
+    "eainfo": 18,
+    "Binary": 100
+}

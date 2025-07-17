@@ -1,0 +1,19 @@
+{
+    "distributor": 0,
+    "distFormat": 0,
+    "formatName": 0,
+    "formatVer": 1,
+    "fileDecmTech": 2,
+    "formatInfo": 3,
+    "distorTran": 1,
+    "unitsODist": 0,
+    "transSize": 1,
+    "onLineSrc": 2,
+    "linkage": 0,
+    "protocol": 1,
+    "orName": 2,
+    "orDesc": 3,
+    "orFunct": 4,
+    "OnFunctCd": 0,
+    "distorCont": 2
+}

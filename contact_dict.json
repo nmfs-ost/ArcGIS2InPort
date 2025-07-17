@@ -1,0 +1,42 @@
+{
+    "citRespParty": [
+        {
+            "role": "Custodian",
+            "rpIndName": "Timothy J Haverland",
+            "eMailAdd": "tim.haverland@noaa.gov"
+        }
+    ],
+    "idPoC": [
+        {
+            "role": "Point of Contact",
+            "rpIndName": "Melissa Ann Karp",
+            "eMailAdd": "melissa.karp@noaa.gov"
+        }
+    ],
+    "distorCont": [
+        {
+            "role": "Distributor",
+            "rpIndName": "Timothy J Haverland",
+            "eMailAdd": "tim.haverland@noaa.gov"
+        }
+    ],
+    "mdContact": [
+        {
+            "role": "Author",
+            "rpIndName": "John F Kennedy",
+            "eMailAdd": "john.f.kennedy@noaa.gov"
+        }
+    ],
+    "stepProc": [
+        {
+            "role": "Processor",
+            "rpIndName": "John F Kennedy",
+            "eMailAdd": "john.f.kennedy@noaa.gov"
+        },
+        {
+            "role": "Processor",
+            "rpIndName": "Melissa Ann Karp",
+            "eMailAdd": "melissa.karp@noaa.gov"
+        }
+    ]
+}
