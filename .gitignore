@@ -153,20 +153,19 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-
 .pyHistory
 
 Archive
 
-ArcGIS Metadata Details.xlsx
+
 GpMessages
 dev
-<<<<<<< HEAD
 
 *.atbx
 *.aprx
 *.gdb
 
+*.xlsx
 *.py
 *.docx
 *.pptx
@@ -174,8 +173,3 @@ dev
 *.txt
 *.ini
 *.xml
-
-=======
-InPort.atbx
-InPort.aprx
->>>>>>> 3543104 (edits)
