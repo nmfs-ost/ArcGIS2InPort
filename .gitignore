@@ -157,7 +157,7 @@ cython_debug/
 
 Archive
 
-ArcGIS Metadata Details.xlsx
+
 GpMessages
 dev
 
@@ -165,6 +165,7 @@ dev
 *.aprx
 *.gdb
 
+*.xlsx
 *.py
 *.docx
 *.pptx
