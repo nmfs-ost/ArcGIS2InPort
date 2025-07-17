@@ -153,15 +153,22 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+*.ini
+*.txt
+*.doc
+*.docx
+*.ppt
 *.pptx
 *.py
 *.gdb
 .pyHistory
-./Archive
+Archive
 *.xml
 *.xlsx
+*.xls
+*.json
 *.aprx
-./GpMessages
-./dev
+GpMessages
+dev
 *.atbx
 *.aprx
