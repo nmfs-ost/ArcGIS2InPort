@@ -1,13 +1,13 @@
 <metadata xml:lang="en">
 	<Esri>
-		<CreaDate>20250709</CreaDate>
-		<CreaTime>18335800</CreaTime>
+		<CreaDate>20250725</CreaDate>
+		<CreaTime>18151500</CreaTime>
 		<ArcGISFormat>1.0</ArcGISFormat>
 		<SyncOnce>FALSE</SyncOnce>
 		<DataProperties>
 			<lineage>
-				<Process ToolSource="c:\users\john.f.kennedy\appdata\local\programs\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CreateMosaicDataset" Date="20250709" Time="183358">CreateMosaicDataset C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb RasterMosaicExample GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]] # # NONE #</Process>
-				<Process ToolSource="c:\users\john.f.kennedy\appdata\local\programs\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\AddRastersToMosaicDataset" Date="20250709" Time="183441">AddRastersToMosaicDataset C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb\RasterMosaicExample "Raster Dataset" C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb\FloatRasterExample;C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb\IntRasterExample UPDATE_CELL_SIZES UPDATE_BOUNDARY NO_OVERVIEWS # 0 1500 "GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]];-400 -400 1000000000;-100000 10000;-100000 10000;8.98315284119521E-09;0.001;0.001;IsHighPrecision" # SUBFOLDERS ALLOW_DUPLICATES BUILD_PYRAMIDS CALCULATE_STATISTICS NO_THUMBNAILS # NO_FORCE_SPATIAL_REFERENCE ESTIMATE_STATISTICS # NO_PIXEL_CACHE C:\Users\john.f.kennedy\AppData\Local\ESRI\rasterproxies\RasterMosaicExample</Process>
+				<Process ToolSource="c:\users\john.f.kennedy\appdata\local\programs\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CreateMosaicDataset" Date="20250725" Time="181515">CreateMosaicDataset C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb RasterMosaicExample GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]] # # NONE #</Process>
+				<Process ToolSource="c:\users\john.f.kennedy\appdata\local\programs\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\AddRastersToMosaicDataset" Date="20250725" Time="181717">AddRastersToMosaicDataset C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb\RasterMosaicExample "Raster Dataset" C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb\FloatRasterExample;C:\Users\john.f.kennedy\Documents\ArcGIS\Projects\ArcGIS-XML-to-InPort-XML\InPort.gdb\IntRasterExample UPDATE_CELL_SIZES UPDATE_BOUNDARY NO_OVERVIEWS # 0 1500 "GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]];-400 -400 1000000000;-100000 10000;-100000 10000;8.98315284119521E-09;0.001;0.001;IsHighPrecision" # SUBFOLDERS ALLOW_DUPLICATES BUILD_PYRAMIDS CALCULATE_STATISTICS NO_THUMBNAILS # NO_FORCE_SPATIAL_REFERENCE ESTIMATE_STATISTICS # NO_PIXEL_CACHE C:\Users\john.f.kennedy\AppData\Local\ESRI\rasterproxies\RasterMosaicExample</Process>
 			</lineage>
 			<itemProps>
 				<itemName Sync="TRUE">RasterMosaicExample</itemName>
@@ -44,10 +44,10 @@
 				</General>
 				<Properties><MaxImageHeight Sync="TRUE">4100</MaxImageHeight><MaxImageWidth Sync="TRUE">15000</MaxImageWidth><MaxRecordCount Sync="TRUE">1000</MaxRecordCount><MaxDownloadImageCount Sync="TRUE">20</MaxDownloadImageCount><MaxDownloadSizeLimit Sync="TRUE">2048</MaxDownloadSizeLimit><MaxMosaicImageCount Sync="TRUE">20</MaxMosaicImageCount><DefaultCompressionQuality Sync="TRUE">75</DefaultCompressionQuality><DefaultCompressionTolerance Sync="TRUE">0.01</DefaultCompressionTolerance><BlendWidth Sync="TRUE">10</BlendWidth><ViewpointSpacingX Sync="TRUE">600</ViewpointSpacingX><ViewpointSpacingY Sync="TRUE">300</ViewpointSpacingY><AllowedItemMetadata Sync="TRUE">Basic</AllowedItemMetadata><DefaultResamplingMethod Sync="TRUE">1</DefaultResamplingMethod><AllowedMosaicMethods Sync="TRUE">NorthWest,Center,LockRaster,ByAttribute,Nadir,Viewpoint,Seamline,None</AllowedMosaicMethods><AllowedCompressions Sync="TRUE">None,JPEG,LZ77,LERC</AllowedCompressions><AllowedMensurationCapabilities Sync="TRUE">Basic</AllowedMensurationCapabilities><AvailableMensurationCapabilities Sync="TRUE">None,Basic,Base-Top Height,Top-Top Shadow Height,Base-Top Shadow Height,3D</AvailableMensurationCapabilities><ClipToBoundary Sync="TRUE">-1</ClipToBoundary><FootprintMayContainNoData Sync="TRUE">-1</FootprintMayContainNoData><CellSizeTolerance Sync="TRUE">0.8</CellSizeTolerance><MinimumPixelContribution Sync="TRUE">1</MinimumPixelContribution><AvailableMosaicMethods Sync="TRUE">NorthWest,Center,LockRaster,ByAttribute,Nadir,Viewpoint,Seamline,None</AvailableMosaicMethods><AvailableCompressionMethods Sync="TRUE">None,JPEG,LZ77,LERC</AvailableCompressionMethods><AvailableItemMetadataLevels Sync="TRUE">None,Basic,Full</AvailableItemMetadataLevels><BandDefinitionKeyword Sync="TRUE">NONE</BandDefinitionKeyword><_docversion_ Sync="TRUE">10</_docversion_><AllowedFields Sync="TRUE">Name,MinPS,MaxPS,LowPS,HighPS,Tag,GroupName,ProductName,CenterX,CenterY,ZOrder,Shape_Length,Shape_Area</AllowedFields><MaxCellSize Sync="TRUE">0.08</MaxCellSize><LowCellSize Sync="TRUE">0.008</LowCellSize><HighCellSize Sync="TRUE">0.008</HighCellSize></Properties><Functions Sync="TRUE"><Function Name="Mosaic Function" Description="Performs on-the-fly mosaic on a raster catalog."/></Functions></RasterProperties>
 		</DataProperties>
-		<SyncDate>20250709</SyncDate>
-		<SyncTime>18352300</SyncTime>
-		<ModDate>20250709</ModDate>
-		<ModTime>18352300</ModTime>
+		<SyncDate>20250725</SyncDate>
+		<SyncTime>18185300</SyncTime>
+		<ModDate>20250725</ModDate>
+		<ModTime>18185300</ModTime>
 		<scaleRange>
 			<minScale>150000000</minScale>
 			<maxScale>5000</maxScale>
@@ -61,7 +61,7 @@
 				<pubDate>2025-01-01T00:00:00</pubDate>
 			</date>
 			<presForm>
-				<PresFormCd value="003"/>
+				<PresFormCd value="005" Sync="TRUE"/>
 				<fgdcGeoform>raster digital data</fgdcGeoform>
 			</presForm>
 			<citRespParty>
@@ -107,27 +107,6 @@
 				</TempExtent>
 			</tempEle>
 		</dataExt>
-		<idPoC>
-			<rpIndName>Melissa Ann Karp</rpIndName>
-			<rpOrgName>NMFS Office of Science and Technology</rpOrgName>
-			<rpCntInfo>
-				<cntAddress>
-					<eMailAdd>melissa.karp@noaa.gov</eMailAdd>
-				</cntAddress>
-				<cntOnlineRes>
-					<linkage>https://www.fisheries.noaa.gov/about/office-science-and-technology</linkage>
-					<protocol>Web Application</protocol>
-					<orName>NMFS Office of Science and Technology</orName>
-					<orDesc>NOAA Fisheries OST</orDesc>
-					<orFunct>
-						<OnFunctCd value="002"/>
-					</orFunct>
-				</cntOnlineRes>
-			</rpCntInfo>
-			<role>
-				<RoleCd value="007"/>
-			</role>
-		</idPoC>
 		<searchKeys>
 			<keyword>RasterMosaicExample</keyword>
 		</searchKeys>
@@ -171,7 +150,7 @@ For more information, please see the NOAA Open Data Licensing Guidance (NOAA Acc
 		<spatRpType>
 			<SpatRepTypCd value="002" Sync="TRUE"/>
 		</spatRpType>
-		<envirDesc Sync="TRUE">Microsoft Windows 10 Version 10.0 (Build 19045) ; Esri ArcGIS 13.5.2.57366</envirDesc>
+		<envirDesc Sync="TRUE">Microsoft Windows 10 Version 10.0 (Build 26100) ; Esri ArcGIS 13.5.2.57366</envirDesc>
 		<idStatus>
 			<ProgCd value="001"/>
 		</idStatus>
@@ -437,7 +416,7 @@ For more information, please see the NOAA Open Data Licensing Guidance (NOAA Acc
 		</distributor>
 	</distInfo>
 	<mdFileID>gov.noaa.nmfs.inport:</mdFileID>
-	<mdParentID>gov.noaa.nmfs.inport:</mdParentID>
+	<mdParentID>gov.noaa.nmfs.inport:65940</mdParentID>
 	<mdHrLv>
 		<ScopeCd value="005"/>
 	</mdHrLv>
@@ -447,7 +426,7 @@ For more information, please see the NOAA Open Data Licensing Guidance (NOAA Acc
 			<MaintFreqCd value="009"/>
 		</maintFreq>
 	</mdMaint>
-	<mdDateSt Sync="TRUE">20250709</mdDateSt>
+	<mdDateSt Sync="TRUE">20250725</mdDateSt>
 	<mdLang>
 		<languageCode value="eng"/>
 		<countryCode value="USA"/>

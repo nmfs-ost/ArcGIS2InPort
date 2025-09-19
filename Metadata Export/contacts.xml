@@ -68,27 +68,6 @@
                 </TempExtent>
             </tempEle>
         </dataExt>
-        <idPoC>
-            <rpIndName>Melissa Ann Karp</rpIndName>
-            <rpOrgName>NMFS Office of Science and Technology</rpOrgName>
-            <rpCntInfo>
-                <cntAddress>
-                    <eMailAdd>melissa.karp@noaa.gov</eMailAdd>
-                </cntAddress>
-                <cntOnlineRes>
-                    <linkage>https://www.fisheries.noaa.gov/about/office-science-and-technology</linkage>
-                    <protocol>Web Application</protocol>
-                    <orName>NMFS Office of Science and Technology</orName>
-                    <orDesc>NOAA Fisheries OST</orDesc>
-                    <orFunct>
-                        <OnFunctCd value="002"/>
-                    </orFunct>
-                </cntOnlineRes>
-            </rpCntInfo>
-            <role>
-                <RoleCd value="007"/>
-            </role>
-        </idPoC>
         <searchKeys>
             <keyword>PolygonExample; NMFS</keyword>
         </searchKeys>
