@@ -156,7 +156,7 @@ cython_debug/
 data
 helpDoc
 Index
-Metadata Export
+Metadata Export/*
 prod
 samples
 src
